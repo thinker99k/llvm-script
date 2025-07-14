@@ -14,11 +14,11 @@ chmod +x *.sh && sudo ./llvm_install.sh
   - `clangd-<version>`
 
 - `update-alternatives`
-  - `clang-<version>` -> `clang` -> `cc`
-  - `clang++-<version>` -> `clang++` -> `c++`
-  - `ld.bfd` -> `ld` (for rollback)
-  - `ld.lld-<version>` -> `ld.lld` -> `ld` (higher priority)
-  - `lldb-<version>` -> `lldb`
+  - `clang-<version>` <- `clang` <- `cc`
+  - `clang++-<version>` <- `clang++` <- `c++`
+  - `ld.bfd` <- `ld` (for rollback)
+  - `ld.lld-<version>` <- `ld.lld` <- `ld` (higher priority)
+  - `lldb-<version>` <- `lldb`
 
 
 ### llvm_remove.sh
@@ -30,9 +30,9 @@ chmod +x *.sh && sudo ./llvm_install.sh
   - `clangd-<version>`
 
 - `update-alternatives`
-  - `gcc` -> `cc`
-  - `g++` -> `c++`
-  - `ld.bfd` -> `ld`
+  - `gcc` <- `cc`
+  - `g++` <- `c++`
+  - `ld.bfd` <- `ld`
   - (`lldb` is completely removed, so there's no rollback)
 
 ---
